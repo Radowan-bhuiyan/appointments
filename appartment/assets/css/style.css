@@ -1,0 +1,871 @@
+
+/*
+==========================================
+   1. Theme Default CSS
+==========================================
+*/
+html{
+	font-size: 62.5%;
+	/*font-size: 10px;*/
+	scroll-behavior: smooth;
+	height: 100%;
+
+
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	width: 100%;
+	height: 100%;
+	line-height:1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+
+	margin: 0;
+}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+input,
+select,
+textarea {
+	outline: none;
+	border:none;
+}
+a,
+i,
+button,
+img,
+input,
+span,
+*:before,
+*:after {
+	-webkit-transition: all 0.3s ease 0s;
+	-ms-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	border:none;
+
+}
+.btn:focus {
+	outline: none !important;
+	box-shadow: none;
+}
+button:focus{
+	outline: none;
+}
+*:focus{
+	outline: none;
+}
+.form-control:focus {
+	border:none;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+a:focus {
+	color: inherit;
+	outline: medium none;
+	transform: scale(1);
+	text-decoration: none;
+}
+a,
+a:hover {
+	text-decoration: none;
+}
+ul {
+	list-style: outside none none;
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.btn{
+	display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	background: #ffcc01;
+	text-align: center;
+	outline: none;
+	border:none;
+	transition: .3s;
+}
+.section-padding {
+	padding: 60px 0;
+}
+.content-top-space{
+	margin-top: 40px;
+}
+.container {
+	width: 90%;
+	margin: auto;
+}
+.row:before,
+.row:after {
+	display: table;
+	content: " ";
+}
+
+.row:after {
+	clear: both;
+}
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.mr-4{
+	margin-right: 4rem;
+}
+.mt-4{
+	margin-top: 4rem;
+}
+.mb-5{
+	margin-bottom: 5rem;
+}
+.pr-5{
+	padding-right: 2rem;
+}
+
+
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.cols {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.cols:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.cols { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+.span_2_of_4 {
+	width: 49.2%; 
+}
+/*
+==========================================
+   2. Navbar CSS
+==========================================
+*/
+.header-top{
+	position: relative;
+	background-color: #fff;
+	color: #000;
+	margin-bottom: 2rem;
+}
+nav.navbar a{
+	color: #000;
+}
+.logo a{
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+
+nav.navbar {
+	display: flex;
+	justify-content: space-between;
+	margin-top:2rem;
+
+}
+
+.main-nav ul li {
+	display: inline-block;
+
+}
+.main-nav ul li:last-child a{
+	margin-right: 0px;
+}
+.main-nav ul li a{
+	font-weight:400;
+	font-size: 1.3rem;
+	margin-right: 20px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+
+/*toogle menu*/
+.menu-icon{
+	width: 28px;
+	display: none;
+}
+
+/*
+==========================================
+   3. Hero CSS
+==========================================
+*/
+.hero {
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.hero:before {
+	height: 100%;
+	width: 80%;
+	margin-left: 20%;
+	content: " ";
+	background-image: linear-gradient(rgb(206 206 206 / 4%),rgb(117 117 117 / 12%)), url(../img/appartment.jpeg);
+	position: absolute;
+	right: 0;
+	z-index: -1;
+}
+.hero h1{
+	color: #5b9cad;
+	font-size:6rem;
+	line-height: 7rem;
+	font-weight:600;
+}
+.footer .input-group,
+.rent .input-group,
+.hero .input-group {
+	background: #fff;
+	width: 33%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 60px;
+}
+
+.hero input{
+	width: 72%;
+	height: 100%;
+}
+
+.rent .input-group {
+	margin: 30px 0px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+	padding: 0px 20px;
+}
+.footer button.btn.form-control,
+.rent button.btn.form-control,
+.hero button.btn.form-control {
+	position: absolute;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	right: -3px;
+	height: 100%;
+	color: #000;
+	font-weight: bold;
+}
+.rent input.form-control,
+.hero input.form-control {
+	color: 	#000;
+	font-size: 1.4rem;
+	margin-left: 20px
+}
+
+.input-group i{
+	font-size: 1.4rem;
+	color: #919eb1;
+}
+.hero-bottom-icons {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	justify-content: space-between;
+	width: 100%;
+}
+.scroll a {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #919eb1;
+}
+.scroll {
+	transform: rotate(-90deg) translate(35px, -30px);
+}
+.right-icons{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 35%;
+	background: #ffcc01;
+	padding:10px 10px; 
+	text-align: center;
+}
+
+.right-icons i{
+	margin:8px 20px;
+	color: #fff;
+}
+.right-icons strong{
+	font-size: 1.4rem;
+	color: #000;
+}
+input.form-control::placeholder {
+	color: #919eb1;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+}
+
+
+.company-left {
+	float: left;
+	max-width:50%;
+	color: both;
+}
+
+.company-right {
+	float: right;
+	max-width:50%;
+}
+.item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+.company-item {
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+	margin: 7px 7px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 58px 0px;
+	width: 202px;
+}
+.company-item span.count {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 3rem;
+	color: #ffcc01;
+	margin-bottom: 8px;
+}
+
+.company-item h6 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+h2.company-title {
+	font-size: 4rem;
+	line-height: 5rem;
+	font-weight: 500;
+	color: #1f373d;
+}
+
+.company-left p {
+	font-size: 1.3rem;
+	line-height: 3rem;
+	margin: 39px 0px;
+}
+
+
+/*
+==========================================
+   4. Rent CSS
+==========================================
+*/
+
+.rent{
+	position: relative;
+	background: #f6f5f4;
+}
+.service-rent {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+.rent-item {
+	flex-basis: 31%;
+	margin-right: 3%;
+	margin-bottom: 35px;
+}
+.service-rent div:nth-child(3n){
+
+		margin-right: 0px;
+}
+
+
+.rent-icons {
+	padding: 15px 20px;
+	background: #ddd;
+}
+.rent-icons h4 {
+	font-size: 1.5rem;
+}
+.rent-icons h5.price {
+	font-size: 1.3rem;
+	color: #ffcc01;
+}
+.favi-icon {
+	margin-top: 11px;
+	display: flex;
+	justify-content: space-between;
+	color: #919eb1;
+	font-weight: 400;
+}
+
+
+.rent-item img {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.portfolio {
+	column-count: 3;
+	column-gap: 20px;
+}
+.portfolio-item{
+	position: relative;
+	background-color: #ddd;
+	margin: 0 0 15px;
+	width: 100%;
+	display: inline-block;
+}
+.portfolio-item img{
+	width: 100% !important;
+}
+.portfolio-hover {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	visibility: hidden;
+	z-index: 9999;
+}
+.portfolio-hover::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -111;
+	background: #000;
+	content: "";
+	opacity: .49;
+}
+
+.portfolio-item:hover .portfolio-hover  {
+	visibility: visible;
+}
+
+.portfolio-hover a{
+	font-weight: 600;
+	color: #fff;
+	font-size: 2rem;
+	overflow:hidden;
+}
+.favi-icon p{
+	display: inline-block;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+.favi-icon i {
+	margin-left: 20px;
+	margin-right: 12px;
+}
+
+
+.site-buttons{
+	display: flex;
+	align-items: center;
+}
+.site-buttons .btn.view{
+	height: 60px;
+	color: #000;
+	padding:0px 30px;
+	margin-left: 20px;
+	background: #fff;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+}
+
+
+/*
+==========================================
+   5. Works CSS
+==========================================
+*/
+.work {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+p.text {
+	color: #1f373d;
+	max-width: 400px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.2rem;
+	margin:14px 0px;
+	padding: 10px 0px;
+}
+.col-3 {
+	position: relative;
+	flex-basis: 29%;
+	min-width: 250px;
+	margin: 18px 0px;
+	padding: 23px 14px;
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+	cursor: pointer;
+	transition: .5s;
+	overflow: hidden;
+}
+.work h1 {
+	position: absolute;
+	top: -16px;
+	left: -9px;
+	font-size: 4rem;
+}
+.work-content {
+	padding: 30px;
+}
+.ml-3 {
+	margin-left: 25px;
+	margin-top: 11px;
+}
+.work h2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	line-height: 6rem;
+}
+.work-content p {
+	font-size: 1.5rem;
+	margin: 10px 0px;
+}
+
+/*
+==========================================
+   6. Service CSS
+==========================================
+*/
+
+.col-3 a {
+	display: inline-block;
+	line-height: 28px;
+	font-size: 1.5rem;
+	font-weight: 500;
+	border-bottom: 2px solid #000;
+	color: #000;
+}
+
+.col-3.active a,
+.col-3:hover a{
+	color: #fff;
+	border-bottom: 2px solid #fff;
+}
+.col-3.active,
+.col-3:hover{
+	border-bottom: 2px solid #000;
+	background: #ffcc01;
+	color: #fff;
+}
+
+.grid {
+	grid-template-columns: auto auto;
+	display: grid;
+	grid-column-gap: 29px;
+}
+.grid-item:first-child {
+	height: 100%;
+}
+.item-1 h3 {
+	font-size: 2rem;
+}
+.item-1 p {
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	font-weight: 400;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+.grid-item.grid-item1 {
+	width: 80%;
+	margin-left: 20%;
+}
+/*
+==========================================
+   7. Agent CSS
+==========================================
+*/
+.agent{
+	background: #ddd;
+}
+
+.agent-portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+.agent .rent-icons {
+	background: #fff;
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);		
+}
+/* Create two equal columns that sits next to each other */
+.column {
+	flex: 30%;
+	padding: 0 6px;
+}
+
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+}
+.favi-icon i:last-child {
+	margin-right: 0px !important;
+}
+.row.add {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.add-img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.add-img .right-icons{
+	position: absolute;
+	width: 40%;
+	bottom: -18px;
+	left: 20%;
+	justify-content: center;
+}
+.add-1 {
+	padding: 0px 20px;
+}
+.add-1 h3 {
+	font-size: 2rem;
+	margin-bottom: 30px;
+}
+
+
+.add-1 p {
+	font-size: 1.4rem;
+	margin: 19px 0px;
+}
+.add-1 >div{
+	text-align: center;
+}
+.btn-green {
+    background: #1f373d;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.text-right {
+	text-align: right;
+}
+
+/*
+==========================================
+   8. Footer CSS
+==========================================
+*/
+
+
+.footer{
+	background: #1f373d;
+	padding:40px 0px;
+}
+.footer-top h2 {
+	color: #fff;
+	font-size: 2rem;
+}
+.footer .input-group {
+	height: 40px;
+}
+
+.footer input.form-control {
+	margin-left: 10px;
+}
+.footer .btn.form-control{
+	background: none;
+}
+.footer-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #ddd;
+}
+.footer-bottom {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+.footer-bottom div:nth-of-type(1) {
+	flex-basis: 30%;
+}
+.footer-bottom div {
+	flex-basis: 16%;
+}
+.footer-bottom h2.luxestate{
+	font-size: 2rem;
+	color: #fff;
+}
+.footer-bottom a{
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 2.5rem;
+}
+.footer-bottom  p {
+	margin-top: 40px;
+	color: #fff;
+}
+.footer-bottom  h3{
+	font-size:1.5rem;
+	font-weight: 500;
+	margin-bottom: 20px;
+	color: #919eb1;
+}
+/*
+==========================================
+   7. Responsive CSS
+==========================================
+*/
+@media only screen and (max-width:1092px){
+	.rent-icons h4 {
+		font-size: 1.2rem !important;
+	}
+}
+@media only screen and (max-width: 992px){
+
+	nav.navbar ul {
+		position: absolute;
+		top: 55px;
+		left: 0;
+		width: 100%;
+		height:auto;
+		background: #333;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		z-index: 1111;
+	}
+	#menu-item{
+		padding: 1.5rem 0rem;
+	}
+	.main-nav ul li {
+		text-align: right;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 0;
+		display: block;
+	}
+	.main-nav ul li a{
+		color: #fff;
+
+	}
+	.main-nav ul li a.mr-5{
+		margin-right: 0;
+		
+	}
+	.menu-icon{
+		display:block;
+	}
+	a.btn.btn-getting {
+		margin-right: 1.9rem;
+	}
+	.hero h1 {
+		font-size: 4rem !important;
+	}
+	.hero .input-group {
+		width: 52% !important;
+	}
+	.right-icons {
+		width: 40% !important;
+		padding: 10px 0px !important;
+	}
+	.company-right, .company-left{
+		max-width: 100% !important;
+		margin-top: 10px;
+		float: none !important;
+	}
+	.company-item {
+		width: 125px !important;
+	}
+	.rent-item {
+		width: 29% !important;
+		margin: 10px 0px;
+	}
+	.portfolio {
+		column-count: 2 !important;
+	}
+	.span_2_of_4 {
+		width:100% !important;
+		margin-bottom: 23px;
+	}
+	.grid {
+		grid-template-columns: auto !important;
+	}
+	.grid-item.grid-item1 {
+		margin-top: 15px;
+		width: 100% !important;
+		margin-left:0 !important;
+	}
+	.section-padding {
+		padding: 60px 0;
+	}
+	.col-3 {
+		padding: 15px 9px!important;
+	}
+	.column {
+		flex: 31% !important;
+		padding: 0 4px;
+	}
+	.rent-icons {
+		padding: 15px 5px !important;
+	}
+	html{
+		font-size: 50.5%;
+	}
+}
+
+
+@media only screen and (max-width: 692px){
+	.rent-item.middle {
+		margin: 10px 0px !important;;
+	}
+	.rent-item {
+		width: 100% !important;
+
+	}
+	.portfolio {
+		column-count: 1 !important;
+	}
+	.column {
+		flex: 49% !important;
+	}
+	.footer .input-group, .rent .input-group, .hero .input-group {
+		width: 48% !important;
+		height: 40px;
+	}
+	.company-item {
+		width: 118px !important;
+	}
+
+}
+
